@@ -10,7 +10,7 @@ Codice:
 sudo apt install openvpn
 
 <p align="left">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="bash" width="40" height="40"/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="bash" width="60" height="60"/>
     </p>
 
 2. Scarica il repository con i soliti comandi:
