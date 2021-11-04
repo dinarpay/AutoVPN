@@ -1,5 +1,5 @@
 ## AutoVPN
-Ciao, oggi te lo spiego e ti mostro come realizzare il tuo strumento VPN su Linux.
+Ciao, oggi ti lo spiego e ti mostro come realizzare il tuo strumento VPN su Linux.
 Questo strumento è scritto in Bash, analizza l'elenco VPN Gate e quindi si connette a configurazioni casuali.
 
 # Cominciamo... =)
