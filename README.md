@@ -33,4 +33,7 @@ sudo ./autovpn.sh
 
 Lo script raccoglierà informazioni su VPN ed eseguirà openvpn.
 
+![image](https://user-images.githubusercontent.com/56889513/140475641-c9acbe73-04c1-4cbc-a263-63838c2033ae.png)
+
+
 P.S. Se non si carica, puoi premere Ctrl + C, la console ti chiederà di selezionare un'altra VPN o di completare il lavoro.
