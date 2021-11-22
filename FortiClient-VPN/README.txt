@@ -1,12 +1,12 @@
-Connessione VPN continua e automatizzata con FortiClient (solo CLI) usando bash e expect scripting.
+##Connessione VPN continua e automatizzata con FortiClient (solo CLI) usando bash e expect scripting.
 
-Problema
+#Problema
 Come in questo caso, avevo bisogno di mantenere una connessione VPN (quasi) continua a un server (server 1) dal mio server (server 2) che stava eseguendo una web-app Tomcat (su Ubuntu Server 16.04).  
 Il server 1 faceva parte di una rete che forniva un accesso VPN protetto utilizzando un gateway VPN FortiNet.
 
 La soluzione che segue utilizza uno script bash (che crea uno script expect esterno) per automatizzare la connessione, e la riconnessione (se la connessione VPN cade), della connessione VPN al server 1.
 
-Soluzione
+#Soluzione
 Installazione di Forticlient e dipendenze
 Impostare
 Script Bash (con expect script incorporato) da eseguire (e mantenere la connessione VPN FortiClient)
@@ -19,10 +19,12 @@ sudo apt-get install <DOWNLOAD_LOCATION>/forticlient-sslvpn_4.4.2333-1_amd64.deb
 Avrete anche bisogno di installare i pacchetti ppp e expect.  Se stai usando Ubuntu, fai semplicemente
 
 sudo apt-get install ppp expect
+
 Impostare
 Forticlient dovrebbe essere installato in /opt/forticlient-sslvpn/64bit/.  A quanto pare è necessario eseguire prima lo script di setup:
 
 sudo /opt/forticlient-sslvpn/64bit/helper/setup
+
 Scorrere il legalese e poi accettare (digitare Y).  Dovremmo avere tutto il necessario per automatizzare la connessione.
 
 Script Bash (con script expect incorporato) da eseguire (e mantenere la connessione VPN di FortiClient)
@@ -45,8 +47,8 @@ Supponiamo che il nostro script si chiami forti-vpn.sh e si trovi nella nostra c
 sudo chown root:root ~/forti-vpn.sh
 sudo chmod 600 ~/forti-vpn.sh
 sudo chmod +x ~/forti-vpn.sh
-Per eseguire lo script, passate alla cartella dove risiede ed eseguite
 
+Per eseguire lo script, passate alla cartella dove risiede ed eseguite
 sudo ./forti-vpn.sh &
 che eseguirà lo script in background.
 
