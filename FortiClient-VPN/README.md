@@ -29,6 +29,7 @@ sudo /opt/forticlient-sslvpn/64bit/helper/setup
 
 Scorrere il legalese e poi accettare (digitare Y).  Dovremmo avere tutto il necessario per automatizzare la connessione.
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Script Bash (con script expect incorporato) da eseguire (e mantenere la connessione VPN di FortiClient)
 Si prega di notare che il seguente approccio memorizza una password vpn in chiaro nel file di script, e come tale è un potenziale rischio per la sicurezza. 
 Lo script dovrebbe essere bloccato per impedire agli utenti senza autorizzazione di visualizzarne il contenuto. Quindi, questo approccio può essere appropriato solo per un server/sistema che è strettamente gestito 
@@ -36,6 +37,7 @@ o non accessibile da altri utenti.
 
 Ora creeremo uno script bash per gestire la connessione (e la riconnessione automatica).  Lo script qui sotto fa diverse cose, inclusa la creazione e l'esecuzione di uno script expect esterno.  
 Questo script expect automatizza ed emula un po' di interazione umana che forticlientsslvpn_cli richiede.
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Il cervello dello script expect incorporato è stato scritto da mgeeky e il suo script originale può essere trovato qui.  Molte grazie a mgeeky.
 NOTA: il "EOF" sulla linea 47 DEVE essere preceduto da un singolo carattere TAB (non spazi), altrimenti lo script fallirà. Se state copiando/incollando lo script qui sopra nel vostro editor di testo Linux preferito, 
@@ -60,6 +62,7 @@ Per fermare lo script dovrete trovare i suoi pid e ucciderli.  Se avete chiamato
 sudo pkill forti
 ucciderà tutti i processi con il nome "forti" (che includono lo script e i processi forticlient generati).
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 In alternativa, puoi usare htop. Dovreste averlo installato (se no, fate sudo apt-get install htop).  Con htop potete quindi localizzare il processo sudo forti-vpn.sh e selezionarlo (con la barra spaziatrice) e poi premere F9 (kill) 
 e poi 9 (sigkill) e premere invio.
 
