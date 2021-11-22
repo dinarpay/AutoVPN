@@ -1,7 +1,7 @@
 ### Connessione VPN continua e automatizzata con FortiClient (solo CLI) usando bash e expect scripting.
 
 ## Problema
-
+[![See MobSF Documentation](https://user-images.githubusercontent.com/4301109/70686099-3855f780-1c79-11ea-8141-899e39459da2.png)](https://mobsf.github.io/docs)
 Come in questo caso, avevo bisogno di mantenere una connessione VPN (quasi) continua a un server (server 1) dal mio server (server 2) che stava eseguendo una web-app Tomcat (su Ubuntu Server 16.04).  
 Il server 1 faceva parte di una rete che forniva un accesso VPN protetto utilizzando un gateway VPN FortiNet.
 
