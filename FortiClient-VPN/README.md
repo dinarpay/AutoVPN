@@ -1,4 +1,4 @@
-### Connessione VPN continua e automatizzata con FortiClient (solo CLI) usando bash e expect scripting.
+# Connessione VPN continua e automatizzata con FortiClient (solo CLI) usando bash e expect scripting.
 
 ## Problema
 
@@ -7,8 +7,8 @@ Il server 1 faceva parte di una rete che forniva un accesso VPN protetto utilizz
 
 La soluzione che segue utilizza uno script bash (che crea uno script expect esterno) per automatizzare la connessione, e la riconnessione (se la connessione VPN cade), della connessione VPN al server 1.
 
-# Soluzione
-# Installazione di Forticlient e dipendenze
+### Soluzione
+### Installazione di Forticlient e dipendenze
 
 Impostare
 Script Bash (con expect script incorporato) da eseguire (e mantenere la connessione VPN FortiClient)
@@ -36,7 +36,7 @@ o non accessibile da altri utenti.
 
 Ora creeremo uno script bash per gestire la connessione (e la riconnessione automatica).  Lo script qui sotto fa diverse cose, inclusa la creazione e l'esecuzione di uno script expect esterno.  
 Questo script expect automatizza ed emula un po' di interazione umana che forticlientsslvpn_cli richiede.
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Il cervello dello script expect incorporato è stato scritto da mgeeky e il suo script originale può essere trovato qui.  Molte grazie a mgeeky.
 NOTA: il "EOF" sulla linea 47 DEVE essere preceduto da un singolo carattere TAB (non spazi), altrimenti lo script fallirà. Se state copiando/incollando lo script qui sopra nel vostro editor di testo Linux preferito, 
 rimuovete gli spazi precedenti e sostituiteli con un carattere di tabulazione.
